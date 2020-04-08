@@ -59,29 +59,30 @@ def takeCommand():
     return query
 if __name__  == "__main__":
     wishMe()
-    a=takeCommand()
-    if a=="open Chrome":
-        system.os('cd "\Program Files (x86)\Google\Chrome\Application"')
-        system.os("chrome")
-    if a=="open Visual Studio"or a=="open Visual Code":
-        os.system("code")
-    if "Time" in a or 'time'in a:
-        now=datetime.datetime.now()
-        speak("it's"+now.strftime("%H")+now.strftime("%M"))
-    if 'date' in a or 'Date' in a:
-        now=datetime.datetime.now()
-        speak("today is "+str(int(now.strftime("%d")))+" "+now.strftime("%B")+now.strftime("%Y"))
-    if 'this PC' in a:
-        pass
-    if 'google' in a or 'Google'in a:
-        webbrowser.open_new_tab("www.google.com")
-    if 'Youtube' in a or 'youtube' in a:
-        webbrowser.open_new_tab("www.youtube.com")
-    if 'WhatsApp' in a:
-        webbrowser.open_new_tab("www.whatsapp.com")
-    if 'song' in a or 'Song' in a:
-        webbrowser.open_new_tab("www.gaana.com")
-    if 'close' in a or 'Close' in a:
-        break
-    elif '':
-        speak("related result not found")
+    while 1:
+        a=takeCommand()
+        if a=="open Chrome":
+            system.os('cd "\Program Files (x86)\Google\Chrome\Application"')
+            system.os("chrome")
+        if a=="open Visual Studio"or a=="open Visual Code":
+            os.system("code")
+        if "Time" in a or 'time'in a:
+            now=datetime.datetime.now()
+            speak("it's"+now.strftime("%H")+now.strftime("%M"))
+        if 'date' in a or 'Date' in a:
+            now=datetime.datetime.now()
+            speak("today is "+str(int(now.strftime("%d")))+" "+now.strftime("%B")+now.strftime("%Y"))
+        if 'this PC' in a:
+            pass
+        if 'google' in a or 'Google'in a:
+            webbrowser.open_new_tab("www.google.com")
+        if 'Youtube' in a or 'youtube' in a:
+            webbrowser.open_new_tab("www.youtube.com")
+        if 'WhatsApp' in a:
+            webbrowser.open_new_tab("www.whatsapp.com")
+        if 'song' in a or 'Song' in a:
+            webbrowser.open_new_tab("www.gaana.com")
+        if 'close' in a or 'Close' in a:
+            break
+        elif '':
+            speak("related result not found")
